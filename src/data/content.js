@@ -39,6 +39,7 @@ export const EXPERIENCE = [
     period: "Oct 2025 – Present",
     location: "Istanbul, Turkey",
     current: true,
+    logo: "/logos/amadeus.jpg",
     tech: ["Playwright", "Jira", "SAFe", "Agile", "Test Automation"],
     details: [
       {
@@ -60,6 +61,7 @@ export const EXPERIENCE = [
     role: "Front-end Engineer Intern",
     period: "Jul 2024 – Dec 2024",
     location: "Remote",
+    logo: "/logos/nesine.png",
     tech: ["React", "JavaScript", "Jest", "Scrum", "Performance"],
     details: [
       "Developed and executed unit tests using Jest and JavaScript testing libraries to validate complex application logic.",
@@ -72,6 +74,7 @@ export const EXPERIENCE = [
     company: "P.I. Works",
     role: "Junior Software Test Engineer (Part-time)",
     period: "Aug 2023 – Jul 2024",
+    logo: "/logos/piworks.png",
     location: "Remote",
     tech: ["Postman", "Selenium", "PostgreSQL", "Linux", "API Testing"],
     details: [
@@ -84,6 +87,7 @@ export const EXPERIENCE = [
   {
     company: "ASELSAN",
     role: "Software Developer Intern",
+    logo: "/logos/aselsan.jpg",
     period: "Jul 2023 – Aug 2023",
     location: "Ankara, Turkey",
     tech: ["React", "Spring Boot", "REST", "Docker"],
@@ -97,6 +101,7 @@ export const EXPERIENCE = [
     company: "Izmir University of Economics",
     role: "Student Assistant",
     period: "Sep 2022 – Feb 2023",
+    logo: "/logos/ieu.png",
     location: "Izmir, Turkey",
     tech: ["DSA", "OOP", "Teaching"],
     details: [
