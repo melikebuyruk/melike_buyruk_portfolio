@@ -60,7 +60,14 @@ export default function Experience() {
 
               <ul className="timelineList">
                 {job.details.map((d, i) => (
-                  <li key={i}>{d}</li>
+                  <li
+                    key={i}
+                    className={
+                      typeof d === "object" && d.highlight ? "impactItem" : ""
+                    }
+                  >
+                    {typeof d === "object" ? d.text : d}
+                  </li>
                 ))}
               </ul>
             </div>

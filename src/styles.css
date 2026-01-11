@@ -581,3 +581,11 @@ h1 {
   box-shadow: 0 0 0 1px rgba(139, 92, 246, 0.25),
     0 22px 56px rgba(139, 92, 246, 0.35);
 }
+.impactItem {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.impactItem::marker {
+  color: var(--accent);
+}

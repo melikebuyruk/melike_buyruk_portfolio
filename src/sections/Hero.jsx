@@ -1,4 +1,4 @@
-import { PROFILE } from "../data/content";
+import { PROFILE, EXPERIENCE } from "../data/content";
 import {
   FaGithub,
   FaLinkedin,
@@ -7,6 +7,7 @@ import {
 } from "react-icons/fa6";
 
 export default function Hero() {
+  const currentJob = EXPERIENCE.find((j) => j.current);
   const github = PROFILE.socials.find((s) => s.label === "GitHub")?.href;
   const linkedin = PROFILE.socials.find((s) => s.label === "LinkedIn")?.href;
   const email = PROFILE.socials.find((s) => s.label === "Email")?.href;
@@ -80,8 +81,19 @@ export default function Hero() {
           <div className="glassCard">
             <div className="miniTitle">Currently</div>
             <div className="miniText">
-              QA Engineer at Amadeus • Playwright automation • Scalable testing
+              {currentJob
+                ? `${currentJob.role} at ${currentJob.company}`
+                : "Open to new opportunities"}
             </div>
+            {currentJob?.tech && (
+              <div className="pillRow">
+                {currentJob.tech.slice(0, 3).map((t) => (
+                  <span key={t} className="pill">
+                    {t}
+                  </span>
+                ))}
+              </div>
+            )}
 
             <div className="divider" />
 

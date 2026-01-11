@@ -41,11 +41,17 @@ export const EXPERIENCE = [
     current: true,
     tech: ["Playwright", "Jira", "SAFe", "Agile", "Test Automation"],
     details: [
-      "Maintain and enhance the existing test automation framework using Playwright, ensuring scalable and reliable test coverage.",
-      "Analyze customer and system requirements to design clear, traceable, and high-quality test cases.",
-      "Set up test environments and test data, execute manual and automated tests, and manage defects using Jira.",
-      "Collaborate with international teams across France, Germany, India, and Turkey within the Lufthansa Competency Center.",
-      "Actively participate in Agile Release Train events and sprint ceremonies as part of the SAFe® framework.",
+      {
+        text: "Maintain and enhance the existing test automation framework using Playwright, ensuring scalable and reliable test coverage.",
+        highlight: true,
+      },
+      {
+        text: "Collaborate with international teams across France, Germany, India, and Turkey within the Lufthansa Competency Center.",
+        highlight: true,
+      },
+      {
+        text: "Analyze requirements, design test cases, execute tests, and track defects using Jira.",
+      },
     ],
   },
 
