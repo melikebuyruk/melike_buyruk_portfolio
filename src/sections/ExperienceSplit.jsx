@@ -53,6 +53,21 @@ export default function ExperienceSplit() {
         </aside>
 
         <article className="expDetail card">
+          <div className="expDetailContent">
+            {job.image && (
+              <a
+                href={job.website}
+                target="_blank"
+                rel="noreferrer"
+                className="expDetailImage"
+                aria-label={`${job.company} website`}
+                title={job.company}
+              >
+                <img src={job.image} alt={job.company} />
+              </a>
+            )}
+          </div>
+
           <div className="expDetailTop">
             <div className="expDetailTitleRow">
               <h3 className="expDetailTitle">{job.role}</h3>
