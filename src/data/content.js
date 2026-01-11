@@ -38,6 +38,7 @@ export const EXPERIENCE = [
     role: "Quality Assurance Engineer",
     period: "Oct 2025 – Present",
     location: "Istanbul, Turkey",
+    current: true,
     tech: ["Playwright", "Jira", "SAFe", "Agile", "Test Automation"],
     details: [
       "Maintain and enhance the existing test automation framework using Playwright, ensuring scalable and reliable test coverage.",
@@ -47,6 +48,7 @@ export const EXPERIENCE = [
       "Actively participate in Agile Release Train events and sprint ceremonies as part of the SAFe® framework.",
     ],
   },
+
   {
     company: "Nesine.com",
     role: "Front-end Engineer Intern",
@@ -119,18 +121,21 @@ export const SKILLS = {
 export const PROJECTS = [
   {
     title: "Divine – AI-Powered Music Interaction Platform",
-    desc: "An AI-driven music interaction platform that analyzes audience preferences in real time and recommends songs to performers. Developed as a graduation project and awarded second place nationwide.",
-    tags: ["React", "Firebase", "Flutter", "AI"],
+    desc: "An AI-driven platform that analyzes audience preferences in real time.",
+    tags: ["React", "Firebase", "Flutter"],
+    focus: "Frontend / AI",
   },
   {
-    title: "Admin Control Panel for Defense Communication App",
-    desc: "A secure web-based admin panel enabling real-time data synchronization between a mobile communication app and backend services.",
-    tags: ["React", "Spring Boot", "REST API", "Docker"],
+    title: "Admin Control Panel",
+    desc: "A secure admin panel for managing real-time communication data.",
+    tags: ["React", "Spring Boot", "Docker"],
+    focus: "Full-stack",
   },
   {
     title: "Test Automation Framework",
-    desc: "Maintained and expanded UI and API test automation frameworks using Playwright and Selenium to ensure reliability in large-scale systems.",
+    desc: "Automation work focused on reliability and scalable test coverage.",
     tags: ["Playwright", "Selenium", "Testing"],
+    focus: "QA / Automation",
   },
 ];
 

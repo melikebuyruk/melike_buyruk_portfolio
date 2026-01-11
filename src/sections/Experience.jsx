@@ -32,9 +32,15 @@ export default function Experience() {
               )}
             </div>
 
-            <div className="timelineCard">
+            <div className={`timelineCard ${job.current ? "isCurrent" : ""}`}>
               <div className="timelineHeader">
-                <h4>{job.role}</h4>
+                <div className="expTitleRow">
+                  <h4>{job.role}</h4>
+                  {job.current && (
+                    <span className="currentBadge">Currently</span>
+                  )}
+                </div>
+
                 <span className="timelinePeriod">{job.period}</span>
               </div>
 

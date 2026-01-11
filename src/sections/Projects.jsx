@@ -11,33 +11,9 @@ export default function Projects() {
       <div className="cards3">
         {PROJECTS.map((p) => (
           <article key={p.title} className="card">
+            {p.focus && <span className="projectFocus">{p.focus}</span>}
             <h4>{p.title}</h4>
             <p className="muted">{p.desc}</p>
-
-            {Array.isArray(p.tags) && p.tags.length > 0 && (
-              <div className="tagRow">
-                {p.tags.map((t) => (
-                  <span key={t} className="tag">
-                    {t}
-                  </span>
-                ))}
-              </div>
-            )}
-
-            {Array.isArray(p.links) && p.links.length > 0 && (
-              <div className="linkRow">
-                {p.links.map((l) => (
-                  <a
-                    key={l.href}
-                    href={l.href}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    {l.label} →
-                  </a>
-                ))}
-              </div>
-            )}
           </article>
         ))}
       </div>
