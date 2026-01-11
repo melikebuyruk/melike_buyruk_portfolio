@@ -45,7 +45,6 @@
   opacity: 0.9;
 }
 
-/* Header layout */
 #education .eduHeader {
   position: relative;
   display: grid;
@@ -115,7 +114,6 @@
   color: rgba(255, 255, 255, 0.92);
 }
 
-/* Stats */
 #education .eduStats {
   position: relative;
   margin-top: 16px;
@@ -162,7 +160,6 @@
   color: rgba(255, 255, 255, 0.68);
 }
 
-/* Body */
 #education .eduBody {
   position: relative;
   margin-top: 16px;
@@ -192,7 +189,6 @@
   color: rgba(45, 212, 191, 0.85);
 }
 
-/* Reduce motion */
 @media (prefers-reduced-motion: reduce) {
   #education .eduPaper::after {
     transition: none !important;

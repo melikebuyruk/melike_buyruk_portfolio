@@ -15,6 +15,11 @@ export default function Navbar() {
     return hasContact ? LINKS : [...LINKS, contact];
   }, []);
 
+  const visibleLinks = useMemo(
+    () => allLinks.filter((l) => l.href !== "#contact"),
+    [allLinks]
+  );
+
   const measurePill = () => {
     const navEl = navRef.current;
     const activeEl = linkRefs.current[active];
@@ -27,10 +32,11 @@ export default function Navbar() {
     const navRect = navEl.getBoundingClientRect();
     const elRect = activeEl.getBoundingClientRect();
 
-    const left = elRect.left - navRect.left;
-    const width = elRect.width;
-
-    setPill({ left, width, opacity: 1 });
+    setPill({
+      left: elRect.left - navRect.left,
+      width: elRect.width,
+      opacity: 1,
+    });
   };
 
   useLayoutEffect(() => {
@@ -46,10 +52,25 @@ export default function Navbar() {
     }
 
     return () => window.removeEventListener("resize", onResize);
-  }, [active]);
+  }, []);
 
   useEffect(() => {
-    const ids = ["top", ...allLinks.map((l) => l.href.replace("#", ""))];
+    let topEl = document.getElementById("top");
+    if (!topEl) {
+      topEl = document.createElement("div");
+      topEl.id = "top";
+      topEl.setAttribute("aria-hidden", "true");
+      topEl.style.position = "absolute";
+      topEl.style.top = "0";
+      topEl.style.left = "0";
+      topEl.style.width = "1px";
+      topEl.style.height = "1px";
+      topEl.style.pointerEvents = "none";
+      document.body.prepend(topEl);
+    }
+
+    // sadece navbar’da olan section’ları izle
+    const ids = ["top", ...visibleLinks.map((l) => l.href.replace("#", ""))];
 
     const elements = ids
       .map((id) => document.getElementById(id))
@@ -70,13 +91,14 @@ export default function Navbar() {
           const best = visible
             .map((e) => ({
               id: e.target.id,
-              top: e.boundingClientRect.top,
               absTop: Math.abs(e.boundingClientRect.top),
             }))
             .sort((a, b) => a.absTop - b.absTop)[0];
 
           if (!best?.id) return;
-          setActive(`#${best.id}`);
+
+          const next = `#${best.id}`;
+          setActive((prev) => (prev === next ? prev : next));
         });
       },
       {
@@ -87,15 +109,20 @@ export default function Navbar() {
     );
 
     elements.forEach((el) => observer.observe(el));
-    return () => observer.disconnect();
-  }, [allLinks]);
+
+    return () => {
+      if (rafId) cancelAnimationFrame(rafId);
+      observer.disconnect();
+    };
+  }, [visibleLinks]);
 
   const handleClick = (href) => {
     setActive(href);
+    requestAnimationFrame(() => measurePill());
   };
 
   return (
-    <header className="nav" id="top">
+    <header className="nav">
       <div className="navInner">
         <a className="brand" href="#top" onClick={() => handleClick("#top")}>
           <span className="brandMark">●</span>
@@ -112,21 +139,19 @@ export default function Navbar() {
             }}
           />
 
-          {allLinks
-            .filter((l) => l.href !== "#contact")
-            .map((l) => (
-              <a
-                key={l.href}
-                href={l.href}
-                onClick={() => handleClick(l.href)}
-                ref={(el) => {
-                  if (el) linkRefs.current[l.href] = el;
-                }}
-                className={`navLink ${active === l.href ? "isActive" : ""}`}
-              >
-                {l.label}
-              </a>
-            ))}
+          {visibleLinks.map((l) => (
+            <a
+              key={l.href}
+              href={l.href}
+              onClick={() => handleClick(l.href)}
+              ref={(el) => {
+                if (el) linkRefs.current[l.href] = el;
+              }}
+              className={`navLink ${active === l.href ? "isActive" : ""}`}
+            >
+              {l.label}
+            </a>
+          ))}
         </nav>
       </div>
     </header>

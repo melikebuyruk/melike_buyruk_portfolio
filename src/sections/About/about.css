@@ -1,0 +1,115 @@
+#about .grid2 {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: clamp(28px, 4vw, 56px);
+  align-items: start;
+
+  padding: clamp(18px, 2.6vw, 28px);
+  border-radius: 24px;
+
+  background: radial-gradient(
+      900px 320px at 10% 0%,
+      rgba(255, 255, 255, 0.06),
+      transparent 60%
+    ),
+    radial-gradient(
+      700px 260px at 90% 20%,
+      rgba(255, 255, 255, 0.045),
+      transparent 55%
+    );
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+@media (max-width: 860px) {
+  #about .grid2 {
+    grid-template-columns: 1fr;
+    gap: 22px;
+    padding: 18px;
+    border-radius: 18px;
+  }
+}
+
+#about .card {
+  position: relative;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+@media (min-width: 861px) {
+  #about .card:nth-child(1)::after {
+    content: "";
+    position: absolute;
+    top: 6px;
+    right: calc(-1 * clamp(14px, 2vw, 28px));
+    width: 1px;
+    height: min(320px, 100%);
+    background: linear-gradient(
+      to bottom,
+      transparent,
+      rgba(255, 255, 255, 0.14),
+      transparent
+    );
+    opacity: 0.9;
+  }
+}
+
+#about .card h4 {
+  margin: 0 0 10px;
+  font-size: clamp(18px, 1.2vw, 20px);
+  letter-spacing: 0.2px;
+}
+
+#about .muted {
+  margin: 0;
+  line-height: 1.75;
+  opacity: 0.82;
+  font-size: 0.98rem;
+}
+
+#about .list {
+  list-style: none;
+  margin: 12px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+}
+
+#about .list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#about .list li:last-child {
+  border-bottom: 0;
+}
+
+#about .list li::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  margin-top: 0.42em;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.06);
+}
+
+#about .card:hover .muted,
+#about .card:hover .list li {
+  opacity: 0.92;
+}
+
+#about .card:hover .list li::before {
+  background: rgba(255, 255, 255, 0.28);
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.08);
+}
+
+#about .card:nth-child(2) {
+  padding-top: 2px;
+}
