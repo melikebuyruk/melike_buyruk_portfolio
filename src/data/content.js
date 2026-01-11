@@ -16,6 +16,7 @@ export const PROFILE = {
     { label: "LinkedIn", href: "https://www.linkedin.com/" },
     { label: "Email", href: "mailto:melikebuyruk@outlook.com" },
   ],
+  resumeUrl: "/MelikeBuyrukResume.pdf",
 };
 
 export const ABOUT = `
