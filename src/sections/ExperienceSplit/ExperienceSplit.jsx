@@ -1,7 +1,8 @@
 import { useMemo, useState } from "react";
-import Section from "../components/Section.jsx";
+import Section from "../../Section.jsx";
 import { AnimatePresence, motion } from "framer-motion";
-import { EXPERIENCE } from "../data/content.js";
+import { EXPERIENCE } from "../../data/content.js";
+import "./experienceSplit.css";
 
 export default function ExperienceSplit() {
   const defaultIndex = useMemo(() => {

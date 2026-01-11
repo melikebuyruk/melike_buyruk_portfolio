@@ -1,10 +1,11 @@
-import { PROFILE, EXPERIENCE } from "../data/content";
+import { PROFILE, EXPERIENCE } from "../../data/content.js";
 import {
   FaGithub,
   FaLinkedin,
   FaEnvelope,
   FaFileArrowDown,
 } from "react-icons/fa6";
+import "./hero.css";
 
 export default function Hero() {
   const currentJob = EXPERIENCE.find((j) => j.current);

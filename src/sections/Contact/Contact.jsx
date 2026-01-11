@@ -1,4 +1,4 @@
-import Section from "../components/Section.jsx";
+import Section from "../../Section.jsx";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
 export default function Contact() {

@@ -1,5 +1,5 @@
 import { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
-import { LINKS } from "../data/content";
+import { LINKS } from "../../data/content.js";
 
 export default function Navbar() {
   const [active, setActive] = useState("#top");

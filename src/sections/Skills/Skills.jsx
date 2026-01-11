@@ -1,5 +1,6 @@
-import Section from "../components/Section.jsx";
-import { SKILLS } from "../data/content";
+import Section from "../../Section.jsx";
+import { SKILLS } from "../../data/content.js";
+import "./skills.css";
 
 export default function Skills() {
   const groups = [

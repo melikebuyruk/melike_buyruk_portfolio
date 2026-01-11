@@ -1,5 +1,6 @@
-import Section from "../components/Section.jsx";
+import Section from "../Section.jsx";
 import { PROJECTS } from "../data/content";
+import "./projects.css";
 
 export default function Projects() {
   return (

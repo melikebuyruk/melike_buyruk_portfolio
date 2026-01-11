@@ -1,4 +1,4 @@
-import Section from "../components/Section.jsx";
+import Section from "../../Section.jsx";
 
 export default function About() {
   return (

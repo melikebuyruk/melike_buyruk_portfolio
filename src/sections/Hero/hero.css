@@ -1,0 +1,73 @@
+.hero {
+  padding: 44px 0 26px;
+}
+.heroGrid {
+  display: grid;
+  grid-template-columns: 1.25fr 0.9fr;
+  gap: 18px;
+}
+@media (max-width: 900px) {
+  .heroGrid {
+    grid-template-columns: 1fr;
+  }
+}
+.eyebrow {
+  color: var(--muted);
+  margin: 0 0 12px;
+  font-size: 14px;
+}
+h1 {
+  margin: 0;
+  font-size: 44px;
+  letter-spacing: -0.03em;
+}
+.accent {
+  color: var(--accent);
+}
+.muted {
+  color: var(--muted);
+}
+.lead {
+  color: var(--muted);
+  line-height: 1.6;
+  max-width: 56ch;
+}
+
+.heroActions {
+  display: flex;
+  gap: 12px;
+  margin-top: 18px;
+}
+.btn,
+.btnGhost {
+  padding: 12px 14px;
+  border-radius: 14px;
+  font-weight: 700;
+  font-size: 14px;
+  border: 1px solid var(--line);
+}
+.btn {
+  background: linear-gradient(
+    135deg,
+    rgba(139, 92, 246, 0.35),
+    rgba(59, 130, 246, 0.2)
+  );
+}
+.btnGhost {
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text);
+}
+
+.socialRow {
+  display: flex;
+  gap: 14px;
+  margin-top: 18px;
+}
+.socialRow a {
+  color: var(--muted);
+  font-weight: 600;
+  font-size: 14px;
+}
+.socialRow a:hover {
+  color: var(--text);
+}
