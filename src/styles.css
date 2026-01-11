@@ -455,3 +455,23 @@ h1 {
   border-color: rgba(139, 92, 246, 0.35);
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.28);
 }
+.navLinks a.activeLink {
+  color: var(--text);
+  position: relative;
+}
+
+.navLinks a.activeLink::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -10px;
+  height: 2px;
+  background: rgba(139, 92, 246, 0.8);
+  border-radius: 999px;
+}
+
+.navCta.activeCta {
+  border-color: rgba(139, 92, 246, 0.55);
+  box-shadow: 0 10px 30px rgba(139, 92, 246, 0.25);
+}
