@@ -19,13 +19,14 @@ export default function Skills() {
       title="Skills"
       subtitle="Tools, frameworks, and methodologies I use to build and ship reliable software."
     >
-      <div className="skillGroups">
+      <div className="skillRows">
         {groups.map((g) => (
-          <div className="card" key={g.title}>
-            <h4>{g.title}</h4>
-            <div className="chipGrid" style={{ marginTop: 12 }}>
+          <div className="skillRow" key={g.title}>
+            <div className="skillLabel">{g.title}</div>
+
+            <div className="skillItems">
               {g.items.map((s) => (
-                <span key={s} className="chip">
+                <span key={s} className="skillToken">
                   {s}
                 </span>
               ))}

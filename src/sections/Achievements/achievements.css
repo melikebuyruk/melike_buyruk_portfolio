@@ -1,0 +1,135 @@
+/* =========================
+   Certifications + Achievements
+   Side-by-Side Editorial
+   ========================= */
+
+/* İki section'ı yan yana al */
+#certifications,
+#achievements {
+  width: 100%;
+}
+
+@media (min-width: 980px) {
+  #certifications,
+  #achievements {
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  #certifications {
+    width: 52%;
+    padding-right: 32px;
+  }
+
+  #achievements {
+    width: 48%;
+    padding-left: 32px;
+    border-left: 1px solid var(--line);
+  }
+}
+
+/* Card hissini tamamen kaldır */
+#certifications .card,
+#achievements .card {
+  background: none;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+  border-radius: 0;
+}
+
+/* Grid → editorial list */
+#certifications .grid2,
+#achievements .grid2 {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  margin-top: 18px;
+}
+
+/* Item */
+#certifications .card,
+#achievements .card {
+  position: relative;
+  padding-left: 22px;
+}
+
+/* Dikey çizgi */
+#certifications .card::before,
+#achievements .card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 6px;
+  bottom: 6px;
+  width: 2px;
+  border-radius: 999px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.35),
+    rgba(255, 255, 255, 0.08)
+  );
+}
+
+/* Nokta */
+#certifications .card::after,
+#achievements .card::after {
+  content: "";
+  position: absolute;
+  left: -3px;
+  top: 14px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 4px rgba(139, 92, 246, 0.15);
+}
+
+/* Başlık */
+#certifications h4,
+#achievements h4 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+/* Meta */
+#certifications .muted,
+#achievements .miniTitle {
+  margin-top: 4px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+/* Açıklama */
+#certifications .miniText,
+#achievements .miniText {
+  margin-top: 8px;
+  max-width: 60ch;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+/* Hover – çok minimal */
+#certifications .card:hover h4,
+#achievements .card:hover h4 {
+  color: white;
+}
+
+#certifications .card:hover::after,
+#achievements .card:hover::after {
+  box-shadow: 0 0 0 6px rgba(139, 92, 246, 0.25);
+}
+
+/* Mobile */
+@media (max-width: 980px) {
+  #certifications,
+  #achievements {
+    width: 100%;
+    padding: 0;
+    border: none;
+  }
+}

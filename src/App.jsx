@@ -5,6 +5,8 @@ import Skills from "./sections/Skills/Skills.jsx";
 import Projects from "./sections/Projects.jsx";
 import ExperienceSplit from "./sections/ExperienceSplit/ExperienceSplit.jsx";
 import Education from "./sections/Education/Education.jsx";
+import Certifications from "./sections/Certifications/Certifications.jsx";
+import Achievements from "./sections/Achievements/Achievements.jsx";
 
 export default function App() {
   return (
@@ -17,6 +19,8 @@ export default function App() {
         <Education />
         <ExperienceSplit />
         <Skills />
+        <Certifications />
+        <Achievements />
         <Projects />
 
         <footer className="footer">

@@ -4,6 +4,8 @@ export const LINKS = [
   { href: "#skills", label: "Skills" },
   { href: "#projects", label: "Projects" },
   { href: "#education", label: "Education" },
+  { href: "#certifications", label: "Certifications" },
+  { href: "#achievements", label: "Achievements" },
 ];
 
 export const PROFILE = {
@@ -170,6 +172,28 @@ export const EDUCATION = {
 };
 
 export const ACHIEVEMENTS = [
-  "Second Place – Genç Beyinler Yeni Fikirler Graduation Project Competition (2024)",
-  "Department Second Place & High Honor Certificate – Izmir University of Economics (2024)",
+  {
+    title: "Department Second Place",
+    year: "2024",
+    desc: "Graduated as 2nd in the Computer Engineering department with a GPA of 3.64.",
+  },
+  {
+    title: "Outstanding Achievement Certificate",
+    year: "2024",
+    desc: "Awarded for academic excellence and overall performance.",
+  },
+  {
+    title: "Genç Beyinler Yeni Fikirler",
+    year: "2024",
+    desc: "Second Place – Graduation Project Competition.",
+  },
+];
+
+export const CERTIFICATIONS = [
+  {
+    title: "ISTQB® Certified Tester – Foundation Level",
+    issuer: "ISTQB",
+    year: "2025",
+    note: "Internationally recognized software testing certification.",
+  },
 ];
