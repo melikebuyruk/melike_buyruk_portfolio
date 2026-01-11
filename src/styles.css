@@ -645,31 +645,23 @@ h1 {
   display: grid;
   place-items: center;
   overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .expLogo img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: block;
+  transition: transform 0.25s ease;
 }
 
-.expListItem.isActive {
-  background: rgba(139, 92, 246, 0.1);
-  border-color: rgba(139, 92, 246, 0.45);
-  box-shadow: 0 18px 46px rgba(139, 92, 246, 0.18);
-  padding-left: 18px; /* çizgi için biraz boşluk */
+.expListItem.isActive .expLogo {
+  transform: scale(1.08);
+  box-shadow: 0 10px 28px rgba(139, 92, 246, 0.35);
 }
 
-.expListItem.isActive::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 10px;
-  bottom: 10px;
-  width: 4px;
-  border-radius: 999px;
-  background: rgba(139, 92, 246, 0.85);
+.expListItem.isActive .expLogo img {
+  transform: scale(1.05);
 }
 
 .expLogoFallback {
@@ -766,8 +758,9 @@ h1 {
   line-height: 1.6;
 }
 .expDetailImage {
+  position: relative;
   display: block;
-  height: 220px; /* BÜYÜK FOTO */
+  height: 220px;
   overflow: hidden;
   border-bottom: 1px solid var(--line);
 }
@@ -777,16 +770,27 @@ h1 {
   height: 100%;
   object-fit: cover;
   display: block;
-  transition: transform 0.4s ease, opacity 0.4s ease;
-  opacity: 0.92;
 }
 
 .expDetailImage:hover img {
   transform: scale(1.06);
   opacity: 1;
 }
-
-/* Card inner spacing after image */
 .expDetailContent {
   padding: 18px;
+}
+
+.expDetailImage::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100px;
+  background: linear-gradient(
+    to bottom,
+    rgba(7, 10, 18, 0),
+    rgba(7, 10, 18, 0.65)
+  );
+  pointer-events: none;
 }
