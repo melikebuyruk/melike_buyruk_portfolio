@@ -3,6 +3,7 @@ export const LINKS = [
   { href: "#experience", label: "Experience" },
   { href: "#skills", label: "Skills" },
   { href: "#projects", label: "Projects" },
+  { href: "#education", label: "Education" },
 ];
 
 export const PROFILE = {
@@ -159,7 +160,13 @@ export const EDUCATION = {
   degree: "Bachelor of Science in Computer Engineering",
   school: "Izmir University of Economics",
   period: "2020 – 2024",
-  gpa: "3.63 / 4.00 (Full Scholarship)",
+  gpa: "3.64 / 4.00 (Full Scholarship)",
+  highlights: [
+    "Graduated with a 3.64 GPA on a full scholarship, ranked 2nd in the Computer Engineering department.",
+    "Co-founder of the Cyber Security Club, actively contributing to student initiatives and technical events.",
+    "Volunteered as a mentor, providing academic and technical guidance to fellow students.",
+    "Completed the program on a merit-based full scholarship and received an additional scholarship for ranking within the top three students of the department.",
+  ],
 };
 
 export const ACHIEVEMENTS = [

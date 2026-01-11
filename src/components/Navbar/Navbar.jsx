@@ -1,5 +1,6 @@
 import { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 import { LINKS } from "../../data/content.js";
+import "./navbar.css";
 
 export default function Navbar() {
   const [active, setActive] = useState("#top");
@@ -126,19 +127,6 @@ export default function Navbar() {
                 {l.label}
               </a>
             ))}
-
-          <a
-            href="#contact"
-            onClick={() => handleClick("#contact")}
-            ref={(el) => {
-              if (el) linkRefs.current["#contact"] = el;
-            }}
-            className={`navCta navLink ${
-              active === "#contact" ? "isActiveCta" : ""
-            }`}
-          >
-            Contact
-          </a>
         </nav>
       </div>
     </header>

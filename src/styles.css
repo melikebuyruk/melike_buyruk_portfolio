@@ -53,59 +53,6 @@ a:hover {
   padding: 96px 0 56px;
 }
 
-/* =========================
-   Nav
-   ========================= */
-
-.nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  backdrop-filter: blur(14px);
-  background: rgba(7, 10, 18, 0.55);
-  border-bottom: 1px solid var(--line);
-  z-index: 50;
-}
-.navInner {
-  width: min(1100px, 92vw);
-  margin: 0 auto;
-  height: 64px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.brand {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  font-weight: 700;
-}
-.brandMark {
-  color: var(--accent);
-}
-
-.navLinks {
-  display: flex;
-  gap: 18px;
-  align-items: center;
-}
-.navLinks a {
-  color: var(--muted);
-  font-weight: 600;
-  font-size: 14px;
-}
-.navLinks a:hover {
-  color: var(--text);
-}
-.navCta {
-  padding: 10px 12px;
-  border: 1px solid var(--line);
-  background: rgba(255, 255, 255, 0.04);
-  border-radius: 12px;
-  color: var(--text) !important;
-}
-
 /* General cards (site-wide) */
 .glassCard,
 .card {

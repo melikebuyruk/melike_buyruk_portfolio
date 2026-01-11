@@ -4,6 +4,7 @@ import About from "./sections/About/About.jsx";
 import Skills from "./sections/Skills/Skills.jsx";
 import Projects from "./sections/Projects.jsx";
 import ExperienceSplit from "./sections/ExperienceSplit/ExperienceSplit.jsx";
+import Education from "./sections/Education/Education.jsx";
 
 export default function App() {
   return (
@@ -13,6 +14,7 @@ export default function App() {
       <main className="main">
         <Hero />
         <About />
+        <Education />
         <ExperienceSplit />
         <Skills />
         <Projects />
